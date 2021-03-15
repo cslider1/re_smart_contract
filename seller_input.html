@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Real Estate Property Transfer Contract</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/re_style.css">
+        <script src="js/re.js"></script>
+        <script src=”./node_modules/web3/dist/web3.min.js”></script>
+
+
+    </head>
+    <body>
+      <div class="flex-container"></div>
+        <div class="landing-container">
+            <header>
+              <img src="img/philly.png" alt="logo"; align= "left";>
+              <br>
+              <h3 style="display: inline;"> &nbsp;&nbsp; Real Estate Token Transfer Portal &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(demo)</h3>
+              <p class = "header-text">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Seller's Page</strong> &nbsp;--> &nbsp; property token sale contract</p>
+              
+            </header>
+        </div>
+            <p align: right;>
+                <label class="header-label">&nbsp;&nbsp;Today's Date is: </label><label class="header-label" id="date"></label>
+            
+                <script>
+                    n =  new Date();
+                    y = n.getFullYear();
+                    m = n.getMonth() + 1;
+                    d = n.getDate();
+                    document.getElementById("date").innerHTML = m + "/" + d + "/"+ y;  
+                </script>
+            </p>
+            <br>
+    
+        <div class="box">   
+            <br>
+          <fieldset>
+          
+            <legend><span class="">1.</span> Seller Input</legend>
+            <form name="token" id="token_id">  
+              
+            <label>Token ID:</label>
+                <input class="heighttext2" type="text" id="token_id" name="token_id" maxlength="4" required></input>
+                <label for="other">&nbsp;&nbsp;Seller gets token id from courthouse prior to listing property for sale.</label><br>
+                <br>
+                <br>
+                <button class="button1" type="submit" onclick="
+                  this.form.seller_fname.value = 'Fin';
+                  this.form.seller_lname.value = 'Tech';
+                  this.form.property_address.value = '2021 Graduation Boulevard';
+                  this.form.city.value = 'Philadelphia';
+                  this.form.state.value = 'PA';
+                  this.form.zip.value = '19103';
+                  this.form.type.value = 'Single family home';
+                  this.form.smart.value = '0x319184aC7A096c24Dc7C2df61Ba785feD2377BAf'
+                  this.form.submit();">Submit </button>
+                <br>
+          </fieldset>
+        </div>
+            <br>
+            <br>   
+          <div class="box">   
+            <fieldset>
+              <legend><span class="number">2.</span> Property Transfer Profile </legend>
+              
+                <label> Seller First Name: </label>
+                <input class="heighttext" type = "text" name = "seller_fname" id = "seller_fname" readonly />
+              
+                <label> &nbsp;&nbsp;&nbsp;&nbsp;Seller Last Name: </label>
+                <input class="heighttext" type = "text" name = "seller_lname" id = "seller_lname" readonly/>
+                
+                <label for="type">&nbsp;&nbsp;Property type:</label>
+                <input class="input-long" type="text" id="type" name="type" readonly>
+                <br>
+                <br>
+                
+                <label for="address">Property Address:</label>
+                <input class="input-long" type="text" id="property_address" name="property_address" readonly>
+
+                <label for="city">&nbsp;&nbsp;City:</label>
+                <input class="input-medium" type="text" id="city" name="city" readonly>
+
+                <label for="state">&nbsp;&nbsp;State:</label>
+                <input class="input-short" type="text" id="state" name="state" readonly>
+              
+                <label for="zip">&nbsp;&nbsp;Zip Code:</label>
+                <input class="input-short" type="text" id="zip" name="zip" readonly>
+                <br>
+                <br>
+                <label>Smart Contract Address:</label>
+                <input class="input-long" type="text" id="smart" name="smart" readonly>
+                <br>
+                <br>
+                
+            </fieldset>
+            <br>
+            <br>
+
+            <fieldset>
+            <legend><span class="number">3.</span> Seller Transaction Input (Required)</legend>    
+            
+              <label>Seller Wallet Address:</label>
+              <input class="input-long" type="text" id="seller_wallet" maxlength="42" name="seller_wallet" 
+                value=" 0x1a2b3c4d5e6f7g8h9i0j1a2b3c4d5e6f7g8h9i0j" required>
+              <label display="inline">&nbsp;&nbsp;&nbsp;&nbsp;Seller Email:</label>
+              <input class="input-long" type="text" id="email" maxlength="30" name="email" 
+                value=" FinTech@gmail.com" required>
+              <br>
+              <br>
+              <label for="purchaseprice">Purchase Price: &nbsp;$</label>
+              <input class="heighttext" type="text" id="purchaseprice" name="purchasePrice" value="100,000" required>
+
+              <label for="purchaseprice">&nbsp;&nbsp;&nbsp;Pro-rated taxes to buyer: &nbsp;$</label>
+              <input class="heighttext" type="text" id="tax" name="tax" value="1,500" required>
+
+              <label for="purchaseprice">&nbsp;&nbsp;&nbsp;Closing costs to buyer: &nbsp;$</label>
+              <input class="heighttext" type="text" id="closing" name="closing" value="500" required>
+              <br>
+              <br>
+              
+              <label for="deposit">Deposit Amount: $</label>
+              <input class="heighttext" type="text" id="deposit" name="deposit" value="3,000" required></input>
+
+              <label for="deposit_due">&nbsp;&nbsp;&nbsp;&nbsp;<strong>Deposit Due Date: </strong></label>
+              <input class="heighttext" type="date" id="deposit_due" name="deposit_due" value="3/16/2021" required></input>
+              <label> &nbsp;&nbsp;<strong>by 11:59pm</strong></label>
+
+              <label>&nbsp;&nbsp;&nbsp;&nbsp;<strong>--> &nbsp;&nbsp;&nbsp;Property Transfer Date:</strong> </label>
+              <input class="heighttext" type="date" id="transfer_date" name="transfer_date" value="5/11/2021" required></input>
+              <label> &nbsp;&nbsp;<strong>by 11:59pm</strong></label>
+              <br>
+              <br>
+
+              <label for="final_amount">Total Due From Buyer on Final Transfer: $</label>
+              <input class="heighttext" type="text" id="final_amount" name="final_amount" value="95,000" required></input>
+
+              <label for="buyer_wallet">&nbsp;&nbsp;&nbsp;&nbsp;Buyer Wallet Address:</label>
+              <input class="input-long" type="text" id="buyer_wallet" name="buyer_wallet" 
+              value="  0x1a2b3c4d5e6f7g8h9i0j1a2b3c4d5e6f7g8h9i0j" maxlength="42" required><br>
+              <br>
+
+             
+              <br>
+            
+              <input class="checkbox" type="checkbox" id ="submit" value="submit" name="user_submit" required>
+              <label for="confirm" class="light"> I certify that the information on this page 
+                is true and complete and that I am lawfully authorized to execute this token transfer. I understand that, when I click 
+                <strong>Initiate Property Sale</strong>, the &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transfer will be initiated and will proceed toward a final token transfer when all conditions have been met.</label><br>
+                <br>
+                <br>
+            <!-- ?? Submit formaction telling where the input information will go. -->
+            <!-- ?? Submit formenctype telling what format data will be sent in -->
+            <button class="button2" type="submit" onclick="validation">Initiate Property Sale</button>
+              
+            </fieldset>
+          </div>
+          <script>
+          function validation() {
+            var name = document.getElementById("token_id").value;
+            var email = document.getElementById("email").value;
+            var emailReg = /^([w-.]+@([w-]+.)+[w-]{2,4})?$/;
+            if (name === '' || email === '') {
+            alert("Please input all fields.");
+            return false;
+            } else if (!(email).match(emailReg)) {
+            alert("Invalid Email.");
+            return false;
+            } else {
+            return true;
+            }
+          }
+          </script>
+        </form>
+    </div> 
+
+    <footer>
+      <br>
+      <p style="text-align: center;" font-size: 12px;> © 2021 #RealEstateRevolution </p>
+    </footer>
+    </body>
+</html>
