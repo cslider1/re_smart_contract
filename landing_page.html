@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Real Estate Purchase Contract</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/re_style.css">
+        <script src="js/re.js"></script>
+
+    </head>
+    <body>
+      
+        <div class="landing-container">
+          <header>
+            <img src="img/philly.png" alt="logo"; align="left";>
+            <br>
+            <h3 style="display: inline;"> &nbsp;&nbsp;Real Estate Token Transfer Portal &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (demo)</h3>
+            <p class = "header-text">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for all real estate smart contract sales/purchases</p>
+           
+          </header>
+        </div>
+        <p align: right;>
+          <label class="header-label">&nbsp;&nbsp;Today's Date is: </label><label class="header-label" id="date"></label>
+      
+          <script>
+              n =  new Date();
+              y = n.getFullYear();
+              m = n.getMonth() + 1;
+              d = n.getDate();
+              document.getElementById("date").innerHTML = m + "/" + d + "/"+ y;  
+          </script>
+      </p>
+          <br>
+          <br>
+          
+        <fieldset>
+          <legend><span> Real Estate Transfer Portal </span></legend>
+          <p class="landing-text">Welcome to the DEMO portal for transacting your smart contract real estate transfer. 
+          Click the appropriate link below to take the next steps in the process:</p>
+          <br>
+          <br>
+          <!-- <button onclick="window.open('https://www.google.com','newwindow','width=1000,height=700'); return false;">Open URL in new Window</button> -->
+
+              
+              
+              <a href="seller_input.html">
+                <button class="button2" type="submit">I am the seller </button></a>
+                <label class="landing-text">The seller is required to take the first step to initiate the transfer.</label>
+                
+              <br>
+              <br>
+              <br>
+             
+              <a href="buyer_input.html">
+              <button class="button2" type="submit">I am the buyer </button></a>
+              <br>
+              <br>
+            <p class="landing-text"></p>
+
+              
+           
+        </fieldset>
+      </form>      
+      <footer>
+        <br>
+        <p style="text-align: center;" font-size: 12px;> © 2021 #RealEstateRevolution </p>
+      </footer>
+    </body>
+</html>
+
+
+
+<!-- formaction="/index_2.html" formenctype="multipart/form-data"
+            value="Submit as Multipart/form-data" -->

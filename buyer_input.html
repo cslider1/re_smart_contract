@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!-- Let browser know website is optimized for mobile -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Real Estate Purchase Contract</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/re_style.css">
+        <script src="js/re.js"></script>
+
+    </head>
+    <body>
+    <div class="flex-container"></div>
+
+        <div class="landing-container">
+          <header>
+            <img src="img/philly.png" alt="logo"; align= "left";>
+            <br>
+            <h3 style="display: inline;"> &nbsp;&nbsp; Real Estate Token Transfer Portal &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(demo)</h3>
+            <p class = "header-text">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Buyer's Page</strong> &nbsp;--> &nbsp; property token purchase contract</p>   
+          </header>
+        </div>
+          <p align: right;>
+              <label class="header-label">&nbsp;&nbsp;Today's Date is: </label><label class="header-label" id="date"></label>
+              <script>
+                  n =  new Date();
+                  y = n.getFullYear();
+                  m = n.getMonth() + 1;
+                  d = n.getDate();
+                  document.getElementById("date").innerHTML = m + "/" + d + "/"+ y;  
+              </script>
+          </p>
+          <br>
+        <div class="box">   
+              <br>
+          <fieldset>
+          
+            <legend><span class="number">1.</span> Property Profile</legend>
+            
+                <label for="prop_id">Token ID:</label>
+                <input class="heighttext" type="text" id="prop_id" name="user_prop_id" value="1" readonly></input>
+
+                <label>&nbsp;&nbsp;&nbsp;&nbsp;Smart Contract Address:</label>
+                <input class="input-long" type="text" id="smart" name="smart" value="0x319184aC7A096c24Dc7C2df61Ba785feD2377BAf" readonly>
+                <br>
+                <br>
+                <label for="address">Property Address:</label>
+                <input class="input-long" type="text" id="property_address" name="property_address" value="2021 Graduation Boulevard" readonly>
+
+                <label for="city">&nbsp;&nbsp;&nbsp;&nbsp;City:</label>
+                <input class="input-medium" type="text" id="city" name="city" value="Philadelphia" readonly>
+
+                <label for="state">&nbsp;&nbsp;&nbsp;&nbsp;State:</label>
+                <input class="input-short" type="text" id="state" name="state" value="PA" readonly>
+              
+                <label for="zip">&nbsp;&nbsp;&nbsp;&nbsp;Zip Code:</label>
+                <input class="input-short" type="text" id="zip" name="zip" value="19103" readonly>
+                <br>
+                <br>
+                <label> Seller First Name: </label>
+                <input class="input-medium" type = "text" name = "seller_fname" id = "seller_fname" value="Fin" readonly />
+              
+                <label> &nbsp;&nbsp;&nbsp;&nbsp;Seller Last Name: </label>
+                <input class="input-medium" type = "text" name = "seller_lname" id = "seller_lname" value="Tech" readonly/>
+
+                <label for="type">&nbsp;&nbsp;&nbsp;&nbsp;Property type:</label>
+                <input class="input-long" type="text" id="type" name="type" value="Single family home" readonly>
+                <br>
+                <br>
+                <label for="purchaseprice">Purchase Price: $</label>
+                <input class="heighttext" type="text" id="purchaseprice" name="purchasePrice" value="100,000" readonly>
+
+                <label for="tax">&nbsp;&nbsp;&nbsp;Pro-rated taxes to buyer: &nbsp;$</label>
+                <input class="heighttext" type="text" id="tax" name="tax" value="1,500" readonly>
+
+                <label for="closing">&nbsp;&nbsp;&nbsp;Closing costs to buyer: &nbsp;$</label>
+                <input class="heighttext" type="text" id="closing" name="closing" value="500" readonly>
+                <br>
+                <br>
+                <label display="inline"> Deposit Amount: $</label>
+                <input class="heighttext" type="text" id="deposit" name="deposit" value="3,000" readonly></input>
+
+                <label for="deposit_due">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>--> &nbsp;&nbsp;&nbsp;&nbsp;Deposit Due Date (by 11:59pm): </strong></label>
+                <input class="heighttext" type="date" id="deposit_due" name="deposit_due" value="03/16/2021" readonly></input>
+                <!-- <label> &nbsp;&nbsp;by 11:59pm</label> -->
+                <br>
+                <br>
+                <br>
+                <label for="final_amount">Total Due From Buyer on Final Transfer: $</label>
+                <input class="heighttext" type="text" id="final_amount" name="final_amount" value="95,000" readonly></input>
+
+                <label for="transfer_date">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>--> &nbsp;&nbsp;&nbsp;&nbsp;Final Transfer Date (by 11:59pm): </strong></label>
+                <input class="heighttext" type="date" id="transfer_date" name="transfer_date" value="05/11/2021" readonly></input>
+                <br>
+                <br>     
+            
+          </fieldset>
+        </div>
+        <br>
+        <br>
+        
+        <div class="box">
+          <fieldset>
+            
+            <legend><span class="number">2.</span> Buyer Transaction Input(Required)</legend>    
+            
+            <label for="buyer_fname">Buyer's First Name:</label>
+            <input class="heighttext" type="text" id="buyer_fname" name="buyer_fname" value="Block" required> 
+            
+
+            <label for="buyer_lname">&nbsp;&nbsp;&nbsp;&nbsp;Buyer's Last Name:</label>
+            <input class="heighttext" type="text" id="buyer_lname" name="buyer_lname" value="Chain" required>
+            
+            <label class="control-label" for="ssn">&nbsp;&nbsp;&nbsp;&nbsp;Buyer's SSN:</label>
+            <input type="email" class="input-medium" id="ssn" placeholder="###-##-####" maxlength="11" required>
+            <br> 
+            <br>
+            <label for="buyer_wallet">Buyer Wallet Address:</label>
+            <input class="input-long" type="text" id="buyer_wallet" name="buyer_wallet" value="0x28eb113D1432FA8914aE3167b07A35F8d2BaC3A2" readonly>
+            
+            <label display="inline">&nbsp;&nbsp;&nbsp;&nbsp;Buyer Email:</label>
+            <input class="input-long" type="text" id="email" maxlength="30" name="email" 
+            value=" BlockChain@gmail.com" required>
+            <br>
+            <br>
+            <label for="confirm" class="light"> Confirm wallet address </label>
+            <input class="checkbox" type="checkbox" id ="wallet_confirm" value="wallet_confirm" name="wallet_confirm" required>
+            <br>
+            
+            
+          </fieldset>
+         </div>
+         <br>  
+         <br>
+          
+        <div class="box">
+          <fieldset>
+              
+              <legend><span class="number">3.</span> Appraisal / Inspection Profile(Required)</legend> 
+
+              <input type="checkbox" id ="appraise" value="appraise" name="buyer_appraise"><label for="appraise">  Appraisal Ordered&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --></label>
+              <label for="approve_appraise"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Appraisal Approved (by Appraisor)</label><input type="checkbox" id ="approve_appraise" value="appraise" name="approve_appraise">
+              <label for="reject_appraise"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Appraisal Rejected (by Appraisor)</label><input type="checkbox" id ="reject_appraise" value="appraise" name="reject_appraise">
+              <br>
+              <label>&nbsp;&nbsp;&nbsp;&nbsp;or</label>
+              <br>
+              <input type="checkbox" id ="waive_appraise" value="waive_appraise" name="waive_appraise"><label for="waive_appraise">  Appraisal Waived</label>
+              <br>
+              <br>
+              <br>
+              <input type="checkbox" id ="inspect" value="inspect" name="buyer_inspect"><label for="inspect">  Inspection Ordered&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --></label>
+              <label for="approve_inspect"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inspection Approved (by Inspector)</label><input type="checkbox" id ="approve_inspect" value="approve_inspect" name="approve_inspect">
+              <label for="reject_inspect"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inspection Rejected (by Inspector)</label><input type="checkbox" id ="reject_inspect" value="reject_inspect" name="reject_inspect">
+              <br>
+              <label>&nbsp;&nbsp;&nbsp;&nbsp;or</label>
+              <br>
+              <input type="checkbox" id ="waive_inspect" value="waive_inspect" name="waive_inspect"><label for="waive_inspect">  Inspection Waived</label>
+              <br>
+              <br>
+          
+              <!-- TODO: Add conditional statements to trigger what happens after click Submit. -->
+              <br>
+              <!-- Submit formaction telling where the input information will go. -->
+              <!-- Submit formenctype telling what format data will be sent in -->
+              <button class="button1" type="submit" formaction="/index_2.html" formenctype="multipart/form-data"
+              value="Submit as Multipart/form-data">Submit</button>  
+              
+              <!--Add fine print / disclosure information here?  -->
+          </fieldset>
+        </div>
+        <br>
+        <br>
+
+        <div class="box">
+          <fieldset>
+            <img src="img/stop_sign.png" alt="Stop!"; align= "left";>
+              <label class="header-text" display="inline"> &nbsp;&nbsp;&nbsp;Complete this section only when the appraisal and inspection are either waived or finalized/approved.</label>
+              <br>
+              <br>
+              <br>
+              <br>
+              <input type="checkbox" id ="submit" value="submit" name="user_submit"><label for="confirm" class="light"> I certify that the information on this page 
+                  is true and complete and that I am lawfully authorized to execute this token transfer contract. By clicking Submit, 
+                  I understand that the contract will &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;be executed and will proceed toward a final token transfer when all conditions have been met.</label><br>
+                  <br>
+                  <br>
+              <!-- Submit formaction telling where the input information will go. -->
+              <!-- Submit formenctype telling what format data will be sent in -->
+              <button class="button2" type="submit" onclick="dApp.transferProperty()">Initiate Property Purchase</button>  
+              
+              <!--Add fine print / disclosure information here?  -->
+          </fieldset>
+        </div>  
+    </div>
+
+        <footer>
+          <br>
+          <p style="text-align: center;" font-size: 12px;> © 2021 #RealEstateRevolution </p>
+        </footer>
+
+        <!-- JQuery 3.4.1 slim minified -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+        <!-- Compiled and minified JavaScript for Materialize CSS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" integrity="sha256-U/cHDMTIHCeMcvehBv1xQ052bPSbJtbuiw4QA9cTKz0=" crossorigin="anonymous"></script>
+        <!-- Web3.js -->
+        <script src="https://cdn.jsdelivr.net/npm/web3@1.2.5-rc.0/dist/web3.min.js" integrity="sha256-ZjUHyLZZWkQPbWfRjTSmGtfcTSOermVT6f/CvJW2RY4=" crossorigin="anonymous"></script>
+        <!-- Materialize Init -->
+        <script>
+            $(document).ready(function(){
+            $('.collapsible').collapsible();
+            });
+        </script>
+        <!-- dApp JavaScript -->
+        <script src="dapp.js"></script>
+
+    </body>
+</html>
